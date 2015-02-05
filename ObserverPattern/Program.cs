@@ -10,21 +10,13 @@ namespace ObserverPattern
     {
         static void Main(string[] args)
         {
-            WeatherData weather = new WeatherData();
+            var weatherData = new WeatherData();
 
-            weather.AddObserver(new CurrentConditionsDisplay(weather));
+            var currentConditions = new CurrentConditionsDisplay(weatherData);
 
-            weather.SetTempurature(72);
-            weather.SetHumidity(30);
-            weather.SetPressure(25);
-
-            weather.Notify();
-
-            weather.SetTempurature(75);
-            weather.SetHumidity(32);
-            weather.SetPressure(30);
-
-            weather.Notify();
+            weatherData.SetMeasurements(72, 30, 25);
+            weatherData.SetMeasurements(75, 32, 30);
+            weatherData.SetMeasurements(80, 25, 20);
 
             Console.ReadLine();
         }

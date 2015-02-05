@@ -47,19 +47,12 @@ namespace ObserverPattern
             }
         }
 
-        public void SetTempurature(float temp)
+        public void SetMeasurements(float temp, float hum, float press)
         {
             _tempurature = temp;
-        }
-
-        public void SetHumidity(float hum)
-        {
             _humidity = hum;
-        }
-
-        public void SetPressure(float press)
-        {
             _pressure = press;
+            Notify();
         }
     }
 }
