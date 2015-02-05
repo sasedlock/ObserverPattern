@@ -13,6 +13,7 @@ namespace ObserverPattern
             var weatherData = new WeatherData();
 
             var currentConditions = new CurrentConditionsDisplay(weatherData);
+            var averageTemperature = new AverageTemperatureDisplay(weatherData);
 
             weatherData.SetMeasurements(72, 30, 25);
             weatherData.SetMeasurements(75, 32, 30);
