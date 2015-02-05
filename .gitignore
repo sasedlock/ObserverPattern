@@ -1,0 +1,8 @@
+## Ignore VS temporary files, build results
+
+# User-specific files
+*.suo
+
+# Build results
+[Bb]in/
+[Oo]bj/
